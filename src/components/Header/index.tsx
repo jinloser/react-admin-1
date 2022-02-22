@@ -88,7 +88,7 @@ export default function HeaderCom(props: Props): JSX.Element {
     [props]
   );
 
-  const u = props.userinfo.userBasicInfo;
+  const info = props.userinfo.userBasicInfo;
   return (
     <Header className="header">
       <Tooltip
@@ -116,7 +116,7 @@ export default function HeaderCom(props: Props): JSX.Element {
             )}
           </div>
         </Tooltip>
-        {u ? (
+        {info ? (
           <Dropdown
             overlay={
               <Menu className="menu" selectedKeys={[]} onClick={onMenuClick}>
@@ -151,7 +151,7 @@ export default function HeaderCom(props: Props): JSX.Element {
           >
             <div className="userhead all_center">
               <SmileOutlined />
-              <span className="username">{u.username}</span>
+              <span className="username">{info.username}</span>
             </div>
           </Dropdown>
         ) : (
