@@ -10,6 +10,12 @@ interface Props {
   menus: Menu[];
 }
 
+interface ElementInfo{
+  userId:string,
+  userName:string,
+  isAdmin:boolean
+}
+
 export default function BreadCom(props: Props): JSX.Element {
   /** 根据当前location动态生成对应的面包屑 **/
   const breads = useMemo(() => {
